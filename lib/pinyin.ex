@@ -49,8 +49,8 @@ defmodule Pinyin do
     Enum.map(fn(ch) -> pinyin_to_ascii(ch, false) end)
   end
 
-  @spec permlink(binary) :: binary
-  def permlink(han, sep \\ "-") do
+  @spec permalink(binary) :: binary
+  def permalink(han, sep \\ "-") do
     pinyin(han)
     |> Enum.map(fn(ch) -> pinyin_to_ascii(ch, false) end)
     |> Enum.join(sep)
